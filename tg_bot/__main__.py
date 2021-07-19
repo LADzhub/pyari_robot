@@ -145,11 +145,11 @@ def start(bot: Bot, update: Update, args: List[str]):
                                                                                    InlineKeyboardButton(text="𝙱𝙾𝚂𝚂",
                                                                        url="t.me/LAD_OF_TELEGRAM")],
                                                                                    [InlineKeyboardButton(text="𝙰𝙳𝙳 𝞝𝙇𝞟𝞐 𝞑𝞗𝞣",
-                                                                       url="t.me/{}?startgroup=true".format(bot.username))]))
+                                                                       url="t.me/{}?startgroup=true".format(bot.username))]])
                                                                                    
                                                                 
-                                                                                 
-    else:
+                                                                             
+     else:
         update.effective_message.reply_text("online!")
 
 
