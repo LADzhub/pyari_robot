@@ -26,17 +26,18 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 
 PM_START_TEXT = """
-**Hello {}, My Name is {}!** 
-I am a powerful group management bot.
-For list of available commands check /help.
+**𝙷𝙴𝙻𝙻𝙾 {}, 𝙰𝙼 {}!** 
+𝙰𝙼 𝙰 𝙿𝙾𝚆𝙴𝚁𝙵𝚄𝙻 𝙶𝚁𝙾𝚄𝙿 𝙼𝙰𝙽𝙰𝙶𝙴𝙼𝙴𝙽𝚃 𝙱𝙾𝚃, 
+𝙼𝙰𝙽𝙰𝙶𝙴𝙳 𝙱𝚈 @LAD_botzhub.
+𝙵𝙾𝚁 𝙼𝙾𝚁𝙴 𝙷𝙸𝚃 𝙷𝙴𝙻𝙿 𝙱𝚄𝚃𝚃𝙾𝙽✓.
 
 """
 
 HELP_STRINGS = """
 
-Hello! my name *{}*.
+𝙷𝙴𝙻𝙻𝙾! 𝙰𝙼 *{}*.
 
-*Main* commands available:
+commands available:
  - /start: start the bot
  - /help: PM's you this message.
  - /help <module name>: PM's you info about that module.
@@ -49,7 +50,7 @@ Hello! my name *{}*.
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-TECHNO_IMG = "https://telegra.ph/file/995c44f6a9c2b66966b53.jpg"
+TECHNO_IMG = "https://telegra.ph/file/a9e4e42b473a2f9f0d2f0.jpg"
 IMPORTED = {}
 MIGRATEABLE = []
 HELPABLE = {}
@@ -139,18 +140,17 @@ def start(bot: Bot, update: Update, args: List[str]):
             update.effective_message.reply_photo(
                 TECHNO_IMG,
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="HELP",
+                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="𝙷𝙴𝙻𝙿",
                                                                        callback_data="help_back".format(bot.username)),
-                                                                                   InlineKeyboardButton(text="MY B0SS",
-                                                                       url="t.me/pyarilovesbhavani")],
-                                                                                   [InlineKeyboardButton(text="ADD ɴɪɢʜᴛ ᴋɪɴɢ™ bot✓ TO YOUR GROUP",
-                                                                       url="t.me/{}?startgroup=true".format(bot.username)),
-                                                                                   InlineKeyboardButton(text="Source Code",
-                                                                       url="https://github.com/holymwon/pyari_robot")
-                                                                                 ]]))
-
+                                                                                   InlineKeyboardButton(text="𝙱𝙾𝚂𝚂",
+                                                                       url="t.me/LAD_OF_TELEGRAM")],
+                                                                                   [InlineKeyboardButton(text="𝙰𝙳𝙳 𝞝𝙇𝞟𝞐 𝞑𝞗𝞣",
+                                                                       url="t.me/{}?startgroup=true".format(bot.username))]])
+                                                                                   
+                                                                
+                                                                                 
     else:
-        update.effective_message.reply_text("Yuss, pyaari reloaded")
+        update.effective_message.reply_text("online!")
 
 
 def send_start(bot, update):
